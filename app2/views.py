@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
 # Create your views here.
-def v1_inicio(request):
-    return HttpResponse ("<h1>Vista 1 inicio</h1>")
+def v1_app2(request):
+    return HttpResponse(f"<h1 style='color: green;'>Vista 1 app2 ({request.method})</h1>")
 
-def v2_inicio(request):
-    return HttpResponse ("<h1>Vista 2 inicio</h1>"
-    "<p>Todo lo que necesitas</p>")
+def v2_app2(request):
+    return HttpResponse(
+        "<h1 style='color: green;'>Vista 2 app2</h1>"
+        f"<p>Todo lo que necesitas ({request.method})</p>"
+    )
 
